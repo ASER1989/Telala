@@ -1,14 +1,14 @@
-<!--<div class="panel-full login-bg">-->
+<comm-view>
     <div class="panel panel-default login-box">
-        <div class="panel-heading">
-            <h3 class="panel-title">
-                登录
-            </h3>
-        </div>
-        <form class="panel-body" name="_login_form">
+        <form class="panel-body" name="_user_form">
             <div class="form-group" ng-class="{true:'has-warning'}[uname==null]">
                 <label for="exampleInputEmail1">用户名</label>
                 <input ng-required="true" type="text" class="form-control" id="exampleInputEmail1" ng-model="uname"
+                       placeholder="请输入用户名">
+            </div>
+            <div class="form-group" ng-class="{true:'has-warning'}[nickname==null]">
+                <label for="exampleInputnick">昵称</label>
+                <input ng-required="true" type="text" class="form-control" id="exampleInputnick" ng-model="nickname"
                        placeholder="请输入用户名">
             </div>
             <div class="form-group" ng-class="{true:'has-warning'}[pwd==null]">
@@ -16,7 +16,7 @@
                 <input ng-required="true" type="password" class="form-control" id="exampleInputPassword1" ng-model="pwd"
                        placeholder="请输入密码">
             </div>
-            <button type="submit" class="btn btn-success  btn-block" ng-click="sign(_login_form.$valid)"> 登&nbsp;录</button>
+            <button type="submit" class="btn btn-success  btn-block" ng-click="sign(_user_form.$valid)"> 保&nbsp;存</button>
         </form>
     </div>
-<!--</div>-->
+</comm-view>

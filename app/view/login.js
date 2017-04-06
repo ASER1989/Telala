@@ -13,6 +13,19 @@ angular.module('myApp.login', ['ngRoute'])
   });
 }])
 
-.controller('loginCtrl', [function() {
+.controller('loginCtrl', ['$scope','$http',function($scope,ajax) {
+    $scope.sign=function (valid) {
+        if(valid){
+            ajax({
+                url:"/index/login",
+                method:"post",
+                data:{name:this.uname,pwd:this.pwd}
+            }).then(function(res) {
+                var data = res.data;
+                if(data.code<0){
 
+                }
+            })
+        }
+    }
 }]);

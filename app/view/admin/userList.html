@@ -1,0 +1,45 @@
+<comm-view>
+    <div class="panel">
+        <div class="panel-body">
+            <table class="table table-hover">
+                <caption><button class="btn btn-default f-r" type="button">添加</button></caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>用户名</th>
+                    <th>昵称</th>
+                    <th>创建时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in list">
+                    <th scope="row">{{list.indexOf(item)}}</th>
+                    <td>item.Name</td>
+                    <td>item.NickName</td>
+                    <td>item.CreateTime</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel panel-default login-box" ng-class="{true:'hide'}[loginHide]">
+        <form class="panel-body" name="_user_form">
+            <div class="form-group" ng-class="{true:'has-warning'}[uname==null]">
+                <label for="exampleInputEmail1">用户名</label>
+                <input ng-required="true" type="text" class="form-control" id="exampleInputEmail1" ng-model="uname"
+                       placeholder="请输入用户名">
+            </div>
+            <div class="form-group" ng-class="{true:'has-warning'}[nickname==null]">
+                <label for="exampleInputnick">昵称</label>
+                <input ng-required="true" type="text" class="form-control" id="exampleInputnick" ng-model="nickname"
+                       placeholder="请输入用户名">
+            </div>
+            <div class="form-group" ng-class="{true:'has-warning'}[pwd==null]">
+                <label for="exampleInputPassword1">密码</label>
+                <input ng-required="true" type="password" class="form-control" id="exampleInputPassword1" ng-model="pwd"
+                       placeholder="请输入密码">
+            </div>
+            <button type="submit" class="btn btn-success  btn-block" ng-click="sign(_user_form.$valid)"> 保&nbsp;存</button>
+        </form>
+    </div>
+</comm-view>
