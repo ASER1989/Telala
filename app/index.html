@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app.css">
-  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 
-  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="components/bootstrap/css/bootstrap-theme.min.css">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap-theme.min.css">
 
 
-  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 
 </head>
 <body ng-app="myApp">
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-  <div ng-view></div>
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="components/version/angular.js"></script>
-  <script src="components/version/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src=" http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-  <script src="components/bootstrap/js/bootstrap.min.js"></script>
-  <script src="view/login.js"></script>
-  <script src="view/admin/admin.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+<div ng-view></div>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="components/version/angular.js"></script>
+<script src="components/version/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="view/comm.js"></script>
+<script src=" http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="components/bootstrap/js/bootstrap.min.js"></script>
+<script src="script/service.js"></script>
+<script src="view/login.js"></script>
+<script src="view/admin/admin.js"></script>
+<script src="view2/view2.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>

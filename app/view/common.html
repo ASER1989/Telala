@@ -1,11 +1,18 @@
 <!--<div class="panel-full login-bg">-->
-<nav class="navbar navbar-default">
-    <div class="container">
+<div>
+
+</div>
+<nav class="navbar navbar-default" ng-controller="commCtrl">
+    <div class="container container-fluid text-left" style="margin: 0;">
+        <div class="pull-right text-center pd-top-15">
+            <div class="glyphicon glyphicon-user"></div>
+            admin
+        </div>
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">首页</a></li>
-            <li role="presentation"><a href="#">用户管理</a></li>
-            <li role="presentation"><a href="#">客户管理</a></li>
+            <li role="presentation" ng-class="{true:'active'}[custPath==item.url]" ng-repeat="item in menu"><a ng-href="{{item.url}}">{{item.txt}}</a></li>
+
         </ul>
+
     </div>
 </nav>
 <div>

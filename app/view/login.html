@@ -19,4 +19,13 @@
             <button type="submit" class="btn btn-success  btn-block" ng-click="sign(_login_form.$valid)"> 登&nbsp;录</button>
         </form>
     </div>
+
+<div class="alert alert-danger" role="alert" ng-hide="msgHide">
+    <!-- close实现警示框关闭按钮的样式 -->
+    <!-- data-dismiss="alert"要确保关闭按钮元素上设置了自定义属性 -->
+    <button class="close" type="button" data-dismiss="alert">&times;</button>
+    用户名密码错误！
+    <!-- a标签 警示框的链接 -->
+    <a href="#" class="alert-link">this important alert message</a>
+</div>
 <!--</div>-->

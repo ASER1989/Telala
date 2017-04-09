@@ -12,6 +12,15 @@
   right: 0;
   bottom: 0;
 }
+.dailog-box-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(180,180,180,0.77);
+  z-index: 999;
+}
 .hide {
   display: none;
 }
@@ -20,4 +29,7 @@
 }
 .f-r {
   float: right;
+}
+.pd-top-15 {
+  padding-top: 15px;
 }

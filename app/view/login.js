@@ -13,18 +13,24 @@ angular.module('myApp.login', ['ngRoute'])
   });
 }])
 
-.controller('loginCtrl', ['$scope','$http',function($scope,ajax) {
+.controller('loginCtrl', ['$scope','ajax','path',function($scope,ajax,path) {
+    $scope.path = path;
+    $scope.msgHide = true;
     $scope.sign=function (valid) {
+
         if(valid){
             ajax({
                 url:"/index/login",
                 method:"post",
                 data:{name:this.uname,pwd:this.pwd}
             }).then(function(res) {
-                var data = res.data;
-                if(data.code<0){
-
+                if(res.code<0){
+                    $scope.msgHide = false;
+                    return;
                 }
+                $scope.path.upPath=$scope.path.upPath || "/admin/index";
+                this.path($scope.path.upPath);
+
             })
         }
     }
