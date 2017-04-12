@@ -1,0 +1,53 @@
+<comm-view ng-controller="userListCtrl">
+    <div class="panel" >
+        <div class="panel-body">
+            <table class="table table-hover">
+                <caption>
+                    <button class="btn btn-default f-r" type="button" ng-click="loginHide=false">添加</button>
+                </caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>用户名</th>
+                    <th>昵称</th>
+                    <th>创建时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in list">
+                    <th scope="row">{{list.indexOf(item)}}</th>
+                    <td>{{item.UserName}}</td>
+                    <td>{{item.NickName}}</td>
+                    <td>{{item.CreateTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="dailog-box-bg" ng-hide="loginHide">
+        <div class="panel panel-default login-box">
+            <a class="glyphicon glyphicon-remove pull-right" href="javascript:void(0)" ng-click="loginHide=true"></a>
+            <form class="panel-body" name="_user_add_form">
+                <div class="form-group" ng-class="{true:'has-warning'}[form.name==null]">
+                    <label for="exampleInputEmail1">用户名</label>
+                    <input ng-required="true" type="text" class="form-control" id="exampleInputEmail1"
+                           ng-model="form.name"
+                           placeholder="请输入用户名">
+                </div>
+                <div class="form-group" ng-class="{true:'has-warning'}[form.nickname==null]">
+                    <label for="exampleInputnick">昵称</label>
+                    <input ng-required="true" type="text" class="form-control" id="exampleInputnick"
+                           ng-model="form.nickname"
+                           placeholder="请输入用户名">
+                </div>
+                <div class="form-group" ng-class="{true:'has-warning'}[form.pwd==null]">
+                    <label for="exampleInputPassword1">密码</label>
+                    <input ng-required="true" type="password" class="form-control" id="exampleInputPassword1"
+                           ng-model="form.pwd"
+                           placeholder="请输入密码">
+                </div>
+                <button type="submit" class="btn btn-success  btn-block" ng-click="save(_user_add_form.$valid)"> 保&nbsp;存</button>
+            </form>
+        </div>
+    </div>
+</comm-view>
