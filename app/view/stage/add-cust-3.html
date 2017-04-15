@@ -1,0 +1,97 @@
+<comm-view>
+    <ol class="breadcrumb">
+        <li><a href="#">客户登记</a></li>
+        <li><a href="#!/stage/add">个人信息</a></li>
+        <li><a href="#!/stage/add/2">配偶</a></li>
+        <li><a href="#!/stage/add/3">公司信息</a></li>
+    </ol>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="form-group">
+                <label >公司名称</label>
+                <input ng-required="true" type="text" class="form-control"  ng-model="model.cpname"
+                       placeholder="请输入公司名称">
+            </div>
+            <div class="form-group">
+                <label >所属行业</label>
+                <input ng-required="true" type="text" class="form-control"  ng-model="model.cptype"
+                       placeholder="请输入所属行业">
+            </div>
+
+            <div class="form-group">
+                <label>法人代表</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpuser"
+                       placeholder="请输入法人代表">
+            </div>
+            <div class="form-group">
+                <label>主营产品</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cppro"
+                       placeholder="请输入主营产品">
+            </div>
+            <div class="form-group">
+                <label>成立日期</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpctime"
+                       placeholder="请输入成立日期">
+            </div>
+            <div class="form-group">
+                <label>变更时间</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpuptime"
+                       placeholder="请输入变更时间">
+            </div>
+            <div class="form-group">
+                <label>注册地址</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.job2"
+                       placeholder="请输入注册地址">
+            </div>
+            <div class="form-group">
+                <label>年销售额</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpyearamt"
+                       placeholder="请输入年销售额">
+            </div>
+            <div class="form-group">
+                <label>年纳税额</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cppayamt"
+                       placeholder="请输入年纳税额">
+            </div>
+            <div class="form-group">
+                <label>对公账户半年流水</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cphyearpubval"
+                       placeholder="请输入对公账户半年流水">
+            </div>
+            <div class="form-group">
+                <label>对私账户半年流水</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cphyearprival"
+                       placeholder="请输入对私账户半年流水">
+            </div>
+            <div class="form-group">
+                <label>pos机半年账流水</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpposval"
+                       placeholder="请输入pos机半年账流水">
+            </div>
+            <div class="form-group">
+                <label>配偶名下半年流水</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpotherval"
+                       placeholder="请输入配偶名下半年流水">
+            </div>
+            <div class="form-group">
+                <label>应收账款</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpnin"
+                       placeholder="请输入应收账款">
+            </div>
+            <div class="form-group">
+                <label>应付账款</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpneedpay"
+                       placeholder="请输入应付账款">
+            </div>
+            <div class="form-group">
+                <label>库存</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cpstock"
+                       placeholder="请输入库存">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success  btn-block" ng-click="next()"> 下一步</button>
+            </div>
+        </div>
+    </div>
+
+</comm-view>

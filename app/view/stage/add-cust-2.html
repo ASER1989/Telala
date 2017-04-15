@@ -1,30 +1,31 @@
-<comm-view ng-controller="addcustomer">
+<comm-view>
     <ol class="breadcrumb">
         <li><a href="#">客户登记</a></li>
         <li><a href="#!/stage/add">个人信息</a></li>
+        <li><a href="#!/stage/add/2">配偶</a></li>
     </ol>
     <div class="panel">
         <div class="panel-body">
             <div class="form-group">
                 <label >姓名</label>
-                <input ng-required="true" type="text" class="form-control"  ng-model="model.name"
+                <input ng-required="true" type="text" class="form-control"  ng-model="model.name2"
                        placeholder="请输入姓名">
             </div>
             <div class="form-group">
                 <label >联系电话</label>
-                <input ng-required="true" type="text" class="form-control"  ng-model="model.phone"
+                <input ng-required="true" type="text" class="form-control"  ng-model="model.phone2"
                        placeholder="请输入联系电话">
             </div>
             <div class="form-group">
                 <label>性別</label>
                 <div class="radio">
                     <label>
-                        <input ng-model="model.sex" ng-checked="model.sex=='男'" ng-click="model.sex='男'" type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="男">
+                        <input ng-model="model.sex2" ng-checked="model.sex2=='男'" ng-click="model.sex2='男'" type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="男">
                         男
                     </label>
 
                     <label>
-                        <input ng-model="model.sex" ng-checked="model.sex=='女'" ng-click="model.sex='女'"  type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="女">
+                        <input ng-model="model.sex2" ng-checked="model.sex2=='女'" ng-click="model.sex2='女'"  type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="女">
                         女
                     </label>
                 </div>
@@ -33,39 +34,39 @@
                 <label>婚姻状况</label>
                 <div class="radio">
                     <label>
-                        <input ng-model="model.ismarr" ng-checked="model.ismarr=='已婚'" ng-click="model.ismarr='已婚'"   type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="已婚">
+                        <input ng-model="model.ismarr2" ng-checked="model.ismarr2=='已婚'" ng-click="model.ismarr2='已婚'"   type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="已婚">
                         已婚
                     </label>
 
                     <label>
-                        <input ng-model="model.ismarr" ng-checked="model.ismarr=='未婚'"  ng-click="model.ismarr='未婚'"  type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="未婚">
+                        <input ng-model="model.ismarr2" ng-checked="model.ismarr2=='未婚'"  ng-click="model.ismarr2='未婚'"  type="checkbox" class="checkbox radio-inline" style="margin-top: -2px; width:15px;height: 15px" value="未婚">
                         未婚
                     </label>
                 </div>
             </div>
             <div class="form-group">
                 <label>身份证号码</label>
-                <input ng-required="true" type="text" class="form-control" ng-model="model.cardNo"
+                <input ng-required="true" type="text" class="form-control" ng-model="model.cardNo2"
                        placeholder="请输入身份证号码">
             </div>
             <div class="form-group">
                 <label>户口所在地</label>
-                <input ng-required="true" type="text" class="form-control" ng-model="model.address"
+                <input ng-required="true" type="text" class="form-control" ng-model="model.address2"
                        placeholder="请输入户口所在地">
             </div>
             <div class="form-group">
                 <label>工作单位</label>
-                <input ng-required="true" type="text" class="form-control" ng-model="model.workunit"
+                <input ng-required="true" type="text" class="form-control" ng-model="model.workunit2"
                        placeholder="请输入工作单位">
             </div>
             <div class="form-group">
                 <label>工作地址</label>
-                <input ng-required="true" type="text" class="form-control" ng-model="model.workaddress"
+                <input ng-required="true" type="text" class="form-control" ng-model="model.workaddress2"
                        placeholder="请输入工作地址">
             </div>
             <div class="form-group">
                 <label>职务</label>
-                <input ng-required="true" type="text" class="form-control" ng-model="model.job"
+                <input ng-required="true" type="text" class="form-control" ng-model="model.job2"
                        placeholder="请输入工作职务">
             </div>
             <div class="form-group">

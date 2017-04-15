@@ -6,6 +6,7 @@ angular.module('myApp', [
   'myApp.common',
   'myApp.admin',
   'myApp.login',
+  'myApp.stage',
   'myApp.view2',
   'myApp.service',
   'myApp.version'

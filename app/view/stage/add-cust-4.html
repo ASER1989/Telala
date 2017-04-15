@@ -1,0 +1,40 @@
+
+
+<comm-view ng-controller="addcustomer">
+    <div class="panel">
+        <div class="panel-heading">
+            其他公司信息
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>公司名称</th>
+                    <th>所在地区</th>
+                    <th>法人代表</th>
+                    <th>成立日期</th>
+                    <th>主营产品</th>
+                    <th>年销售额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in list">
+                    <th scope="row">{{list.indexOf(item)+1}}</th>
+                    <td><input ng-model="model.othcpname_{{list.indexOf(item)}}"></td>
+                    <td><input ng-model="model.othcpaddr_{{list.indexOf(item)}}"></td>
+                    <td><input ng-model="model.othcpuser_{{list.indexOf(item)}}"></td>
+                    <td><input ng-model="model.othcpctime_{{list.indexOf(item)}}"></td>
+                    <td><input ng-model="model.othcppro_{{list.indexOf(item)}}"></td>
+                    <td><input ng-model="model.othcpcpyearamt_{{list.indexOf(item)}}"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <input type="button" class="btn btn-success" ng-click="add(list.length)" value="添加">
+                <button type="button" class="btn btn-success" ng-click="next()"> 下一步</button>
+            </div>
+        </div>
+    </div>
+
+</comm-view>

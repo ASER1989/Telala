@@ -4,6 +4,46 @@ opacity(v)
   -o-opacity v
   opacity v
 
+range(a,b,c,d)
+  top a px
+  right b px
+  bottom c px
+  left d px
+*
+  margin 0px
+  padding 0px
+  font-family Arial //"Microsoft YaHei UI"
+  letter-spacing 1px
+  box-sizing border-box
+html,body
+  background-color #FFFFFF
+display(e)
+  if e=="box"
+    display box
+    display:-moz-box;
+    display:-webkit-box;
+  else
+    display e
+
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  vendor('box-shadow', arguments)
+
+transform()
+  vendor('transform', arguments)
+
+transition()
+  vendor('transition', arguments)
+
+.hide
+  display none
 .login-box
   width: 300px
   position absolute
@@ -34,3 +74,22 @@ opacity(v)
   float right
 .pd-top-15
   padding-top:15px;
+
+
+.stage-index
+  .st-idx-warp
+    position absolute
+    border solid 1px #adadad
+    border-radius 5px
+    range 30 30 30 30
+    background-color rgba(15, 15, 15, 0.015)
+    box-shadow 0 0 5px #c0c0c0
+    padding 6% 6%
+  .st-idx-item
+    width: 230px
+    height 100px
+    border:solid 1px grey;
+    text-align center
+    padding 20px 0
+    background-color #ffffff
+    border-radius 5px
