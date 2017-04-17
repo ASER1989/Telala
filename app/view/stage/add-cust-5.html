@@ -1,0 +1,51 @@
+
+<ol class="breadcrumb">
+    <li><a href="#!/stage/add/2">配偶</a></li>
+    <li><a href="#!/stage/add/3">公司信息</a></li>
+    <li><a href="#!/stage/add/4">其他公司信息</a></li>
+    <li><a href="#!/stage/add/5">不动产信息</a></li>
+</ol>
+<comm-view ng-controller="addcustomer">
+    <div class="panel">
+        <div class="panel-heading">
+            不动产信息
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>名称</th>
+                    <th>房屋所在区县</th>
+                    <th>建筑面积</th>
+                    <th>市场价值</th>
+                    <th>全款/按揭/抵押</th>
+                    <th>贷款金额</th>
+                    <th>月供金额</th>
+                    <th>已贷时长</th>
+                    <th>贷款余额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in list">
+                    <th scope="row">{{list.indexOf(item)+1}}</th>
+                    <td><input ng-model="model.housename[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.houseaddr[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.housesize[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.housepirce[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.housepaytype[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.houseneedpay[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.housepay[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.housepaytime[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.housepaylit[list.indexOf(item)]"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <input type="button" class="btn btn-success" ng-click="add(list.length)" value="添加">
+                <button type="button" class="btn btn-success" ng-click="next()"> 下一步</button>
+            </div>
+        </div>
+    </div>
+
+</comm-view>

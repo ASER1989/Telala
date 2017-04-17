@@ -1,0 +1,52 @@
+
+<ol class="breadcrumb">
+    <li><a href="#!/stage/add/4">其他公司信息</a></li>
+    <li><a href="#!/stage/add/5">不动产信息</a></li>
+    <li><a href="#!/stage/add/6">其他贷款信息</a></li>
+    <li><a href="#!/stage/add/7">车辆信息</a></li>
+</ol>
+<comm-view ng-controller="addcustomer">
+    <div class="panel">
+        <div class="panel-heading">
+            其他公司信息
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>权属人</th>
+                    <th>牌照</th>
+                    <th>裸车价</th>
+                    <th>购车日期</th>
+                    <th>按揭/全款</th>
+                    <th>贷款金额</th>
+                    <th>已供月数</th>
+                    <th>月供金额</th>
+                    <th>贷款余额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in list">
+                    <th scope="row">{{list.indexOf(item)+1}}</th>
+                    <td><input ng-model="model.carname[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carno[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.cartotal[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carbuytime[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carbuytype[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carloan[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carloanmonth[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carloanrmonth[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carloanmonthpirce[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.carloanbalance[list.indexOf(item)]"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <input type="button" class="btn btn-success" ng-click="add(list.length)" value="添加">
+                <button type="button" class="btn btn-success" ng-click="next()"> 下一步</button>
+            </div>
+        </div>
+    </div>
+
+</comm-view>

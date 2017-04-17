@@ -1,0 +1,48 @@
+<comm-view>
+    <ol class="breadcrumb">
+        <li><a href="#!/stage/add/5">不动产信息</a></li>
+        <li><a href="#!/stage/add/6">其他贷款信息</a></li>
+        <li><a href="#!/stage/add/7">车辆信息</a></li>
+        <li><a href="#!/stage/add/8">信用卡使用情况</a></li>
+    </ol>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="form-group">
+                <label>本人信用卡总数</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.myblcardCnt">
+            </div>
+            <div class="form-group">
+                <label>信用卡总额度(本人)</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.myblcardTotal">
+            </div>
+            <div class="form-group">
+                <label>已使用额度(本人)</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.myblcardRtl">
+            </div>
+
+            <div class="form-group">
+                <label>配偶信用卡总数</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.blcardCnt">
+            </div>
+            <div class="form-group">
+                <label>信用卡总额度(配偶)</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.blcardTotal">
+            </div>
+            <div class="form-group">
+                <label>已使用额度(配偶)</label>
+                <input ng-required="true" type="text" class="form-control" ng-model="model.blcardRtl">
+            </div>
+
+            <div class="form-group">
+                <label>其他情况（如：保单、公积金、打卡工资等）</label>
+                <textarea ng-required="true" type="text" class="form-control" ng-model="model.lastremark">
+
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn btn-success  btn-block" ng-click="next()"> 下一步</button>
+            </div>
+        </div>
+    </div>
+</comm-view>

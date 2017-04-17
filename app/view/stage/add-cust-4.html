@@ -1,5 +1,11 @@
 
-
+<ol class="breadcrumb">
+    <li><a href="#">客户登记</a></li>
+    <li><a href="#!/stage/add">个人信息</a></li>
+    <li><a href="#!/stage/add/2">配偶</a></li>
+    <li><a href="#!/stage/add/3">公司信息</a></li>
+    <li><a href="#!/stage/add/4">其他公司信息</a></li>
+</ol>
 <comm-view ng-controller="addcustomer">
     <div class="panel">
         <div class="panel-heading">
@@ -21,12 +27,12 @@
                 <tbody>
                 <tr ng-repeat="item in list">
                     <th scope="row">{{list.indexOf(item)+1}}</th>
-                    <td><input ng-model="model.othcpname_{{list.indexOf(item)}}"></td>
-                    <td><input ng-model="model.othcpaddr_{{list.indexOf(item)}}"></td>
-                    <td><input ng-model="model.othcpuser_{{list.indexOf(item)}}"></td>
-                    <td><input ng-model="model.othcpctime_{{list.indexOf(item)}}"></td>
-                    <td><input ng-model="model.othcppro_{{list.indexOf(item)}}"></td>
-                    <td><input ng-model="model.othcpcpyearamt_{{list.indexOf(item)}}"></td>
+                    <td><input ng-model="model.othcpname[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.othcpaddr[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.othcpuser[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.othcpctime[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.othcppro[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.othcpcpyearamt[list.indexOf(item)]"></td>
                 </tr>
                 </tbody>
             </table>

@@ -27,6 +27,22 @@ angular.module('myApp.stage', ['ngRoute','myApp.service'])
         templateUrl: 'view/stage/add-cust-5.html',
         controller: 'addcustfive'
     })
+    .when('/stage/add/6', {
+        templateUrl: 'view/stage/add-cust-6.html',
+        controller: 'addcustsix'
+    })
+    .when('/stage/add/7', {
+        templateUrl: 'view/stage/add-cust-7.html',
+        controller: 'addcustseven'
+    })
+    .when('/stage/add/8', {
+        templateUrl: 'view/stage/add-cust-8.html',
+        controller: 'addcusteight'
+    })
+    .when('/stage/add/9', {
+        templateUrl: 'view/stage/add-cust-9.html',
+        controller: 'addcustnine'
+    })
 }])
 .service('dataModel',function () {
     this.data=null;
@@ -97,17 +113,107 @@ angular.module('myApp.stage', ['ngRoute','myApp.service'])
 }])
 .controller('addcustfour', ['$scope','ajax','dataModel','$location',function(_that,ajax,dm,$location) {
 
-
     _that.model= dm.data;
     _that.list=[1];
     if(_that.model==null)
     {
-        // $location.path('/stage/add');
+        $location.path('/stage/add');
     }
 
     _that.add=function (i) {
         _that.list.push(i+1);
     }
+
+    _that.next=function () {
+        $location.path('/stage/add/5');
+    }
+
+}])
+.controller('addcustfive', ['$scope','ajax','dataModel','$location',function(_that,ajax,dm,$location) {
+
+    _that.model= dm.data;
+    _that.list=[1];
+    if(_that.model==null)
+    {
+        $location.path('/stage/add');
+    }
+
+    _that.add=function (i) {
+        _that.list.push(i+1);
+    }
+
+    _that.next=function () {
+        $location.path('/stage/add/5');
+    }
+
+}])
+.controller('addcustsix', ['$scope','ajax','dataModel','$location',function(_that,ajax,dm,$location) {
+
+    _that.model= dm.data;
+    _that.list=[1];
+    if(_that.model==null)
+    {
+        $location.path('/stage/add');
+    }
+
+    _that.add=function (i) {
+        _that.list.push(i+1);
+    }
+
+    _that.next=function () {
+        $location.path('/stage/add/5');
+    }
+
+}])
+.controller('addcustseven', ['$scope','ajax','dataModel','$location',function(_that,ajax,dm,$location) {
+
+    _that.model= dm.data;
+    _that.list=[1];
+    if(_that.model==null)
+    {
+        $location.path('/stage/add');
+    }
+
+    _that.add=function (i) {
+        _that.list.push(i+1);
+    }
+
+    _that.next=function () {
+        $location.path('/stage/add/5');
+    }
+
+}])
+.controller('addcusteight', ['$scope','ajax','dataModel','$location',function(_that,ajax,dm,$location) {
+
+    _that.model= dm.data;
+    _that.list=[1];
+    if(_that.model==null)
+    {
+        $location.path('/stage/add');
+    }
+
+    _that.add=function (i) {
+        _that.list.push(i+1);
+    }
+
+    _that.next=function () {
+        $location.path('/stage/add/5');
+    }
+
+}])
+.controller('addcustnine', ['$scope','ajax','dataModel','$location',function(_that,ajax,dm,$location) {
+
+    _that.model= dm.data;
+    _that.list=[1];
+    if(_that.model==null)
+    {
+        $location.path('/stage/add');
+    }
+
+    _that.add=function (i) {
+        _that.list.push(i+1);
+    }
+
     _that.next=function () {
         $location.path('/stage/add/5');
     }
