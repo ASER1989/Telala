@@ -19,12 +19,17 @@ ag.service("ajax",['$http','$location',function ($http,$location) {
         }
         var res={};
         res.then= function (fn) {
+
            return $http(v).then(function (data) {
                 var res = data.data;
                 if(res.code==-110){
                     $location.path('/login');
                     return;
                 }
+               if(res.code==-100){
+                    alert("您无权访问当前页面！")
+                   return;
+               }
 
                 typeof fn =="function" && fn.call($location,res);
             });

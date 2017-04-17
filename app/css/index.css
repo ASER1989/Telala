@@ -74,3 +74,151 @@ body {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+.pager {
+  width: 100%;
+  line-height: 26px;
+}
+.pager >div {
+  display: inline-block;
+  border: solid 1px #f0f0f0;
+  padding: 3px 7px;
+  margin-right: 50px;
+  float: right;
+  -webkit-box-shadow: 0 0 5px #f0f0f0;
+  -moz-box-shadow: 0 0 5px #f0f0f0;
+  box-shadow: 0 0 5px #f0f0f0;
+  color: #877b95;
+  h-h: 26px;
+}
+.pager >div >span {
+  width: 34px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 1px;
+}
+.pager >div >span:hover {
+  background-color: #35c7e5;
+}
+.pager >div a {
+  color: #877b95;
+  text-decoration: none;
+  display: block;
+}
+.pager .custpage {
+  background-color: #35c7e5;
+}
+.pager .checkbox {
+  width: 17px;
+  height: 17px;
+}
+.pager .bt-opt {
+  padding: 0 15px 0 45px;
+}
+.icons {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+}
+.icons.edit {
+  background: url("../img/icon_s.png") no-repeat;
+  background-size: 520px;
+  background-position: -292px -13px;
+  margin: 0px 3px 0 0;
+}
+.icons.dele {
+  background: url("../img/icon_s.png") no-repeat;
+  background-size: 520px;
+  background-position: -317px -13px;
+  margin: 0px 3px 0 0;
+}
+.icons.preview {
+  background: url("../img/icon_s.png") no-repeat;
+  background-size: 520px;
+  background-position: -261px -13px;
+  margin: 0px 3px 0 0;
+}
+.icons.change-head {
+  background: url("../img/pic_icon_upimg.png") no-repeat;
+  background-size: 100% auto;
+  background-position-y: 2px;
+}
+.icons.cust-success {
+  background: url("../img/icons/success.png") no-repeat;
+  background-size: 100% auto;
+  width: 23px;
+  height: 23px;
+}
+.icons.cust-error {
+  background: url("../img/icons/error.png") no-repeat;
+  background-size: 100% auto;
+  width: 23px;
+  height: 23px;
+}
+.icons.pager-prev {
+  background: url("../img/icons/pager-pre.png") no-repeat;
+  background-size: 100% auto;
+  width: 23px;
+  height: 25.56px;
+  background-position: 1px 2px;
+}
+.icons.pager-next {
+  background: url("../img/icons/pager-next.png") no-repeat;
+  background-size: 100% auto;
+  width: 23px;
+  height: 25.56px;
+  background-position: -1px 2px;
+}
+.icons.question {
+  background: url("../img/icons/question.png") no-repeat;
+  background-size: 100% auto;
+  width: 19px;
+  height: 19px;
+  background-position: 0px 2px;
+}
+.icons.shop-car {
+  background: url("../img/icons/icon_shopcar.png") no-repeat;
+  background-size: 100% auto;
+  width: 19px;
+  height: 19px;
+}
+.icons.buyer {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/home/icon_buyer.png") no-repeat;
+  background-size: 36px 14px;
+}
+.icons.buyer.company-name {
+  background-position: 0 0;
+}
+.icons.buyer.address {
+  background-position: -18px 0;
+}
+.icons.buyer.phone {
+  background: url("../img/icons/icon_purch.png") no-repeat;
+  background-size: 90px 22px;
+  background-position: -21px 0;
+}
+.icons.buyer.name {
+  background: url("../img/icons/icon_purch.png") no-repeat;
+  background-size: 90px 22px;
+  background-position: 0px 0;
+}
+.icons.buyer.clock {
+  background: url("../img/icons/icon_purch.png") no-repeat;
+  background-size: 90px 22px;
+  background-position: -65px 0;
+}
+.icons.buyer.mail {
+  background: url("../img/icons/icon_purch.png") no-repeat;
+  background-size: 90px 22px;
+  background-position: -44px 0;
+}
+.float {
+  float: left;
+}
+.float.right {
+  float: right;
+}

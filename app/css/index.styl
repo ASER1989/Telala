@@ -3,6 +3,9 @@ opacity(v)
   -moz-opacity  v
   -o-opacity v
   opacity v
+size(a,b)
+  width a
+  height b
 
 range(a,b,c,d)
   top a px
@@ -93,3 +96,116 @@ transition()
     padding 20px 0
     background-color #ffffff
     border-radius 5px
+
+.pager
+  width: 100%
+  line-height 26px
+  >div
+    display inline-block
+    border solid 1px #f0f0f0
+    padding 3px 7px
+    margin-right 50px
+    float right
+    box-shadow 0 0 5px rgba(240, 240, 240,1)
+    color #877b95
+    h-h 26px
+    >span
+      width 34px
+      text-align center
+      display inline-block
+      cursor pointer
+      margin:0 1px
+      &:hover
+        background-color #35c7e5
+    a
+      color #877b95
+      text-decoration none
+      display block
+  .custpage
+    background-color #35c7e5
+  .checkbox
+    width 17px
+    height 17px
+  .bt-opt
+    padding:0 15px 0 45px
+
+.icons
+  size 15px 15px
+  display inline-block
+  &.edit
+    background url(../img/icon_s.png) no-repeat
+    background-size: 520px;
+    background-position: -292px -13px;
+    margin: 0px 3px 0 0;
+  &.dele
+    background: url(../img/icon_s.png) no-repeat;
+    background-size: 520px;
+    background-position: -317px -13px;
+    margin: 0px 3px 0 0;
+  &.preview
+    background: url(../img/icon_s.png) no-repeat;
+    background-size: 520px;
+    background-position: -261px -13px;
+    margin: 0px 3px 0 0;
+  &.change-head
+    background url(../img/pic_icon_upimg.png) no-repeat
+    background-size 100% auto
+    background-position-y: 2px;
+  &.cust-success
+    background url(../img/icons/success.png) no-repeat
+    background-size 100% auto
+    size 23px 23px
+  &.cust-error
+    background url(../img/icons/error.png) no-repeat
+    background-size 100% auto
+    size 23px 23px
+  &.pager-prev
+    background url(../img/icons/pager-pre.png) no-repeat
+    background-size 100% auto
+    size 23px 25.56px
+    background-position: 1px 2px;
+  &.pager-next
+    background url(../img/icons/pager-next.png) no-repeat
+    background-size 100% auto
+    size 23px 25.56px
+    background-position: -1px 2px
+  &.question
+    background url(../img/icons/question.png) no-repeat
+    background-size 100% auto
+    size 19px 19px
+    background-position: 0px 2px
+  &.shop-car
+    background url(../img/icons/icon_shopcar.png) no-repeat
+    background-size 100% auto
+    size 19px 19px
+  &.buyer
+    size 23px 23px
+    display inline-block
+    vertical-align: middle;
+    background url(../img/home/icon_buyer.png) no-repeat
+    background-size 36px 14px
+    &.company-name
+      background-position 0 0
+    &.address
+      background-position -18px 0
+    &.phone
+      background url(../img/icons/icon_purch.png) no-repeat
+      background-size 90px 22px
+      background-position -21px 0
+    &.name
+      background url(../img/icons/icon_purch.png) no-repeat
+      background-size 90px 22px
+      background-position 0px 0
+    &.clock
+      background url(../img/icons/icon_purch.png) no-repeat
+      background-size 90px 22px
+      background-position -65px 0
+    &.mail
+      background url(../img/icons/icon_purch.png) no-repeat
+      background-size 90px 22px
+      background-position -44px 0
+
+.float
+  float:left;
+  &.right
+    float: right

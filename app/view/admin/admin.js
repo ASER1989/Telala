@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.admin', ['ngRoute','myApp.service'])
+angular.module('myApp.admin', ['ngRoute','myApp.service','app.pager'])
 
 .directive("commView", function () {
     return {
@@ -11,7 +11,7 @@ angular.module('myApp.admin', ['ngRoute','myApp.service'])
 })
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/admin/index', {
-    templateUrl: 'view/admin/index.html',
+    templateUrl: 'view/admin/customerList.html',
     controller: 'indexCtrl'
   })
   .when('/user/list', {
@@ -20,8 +20,26 @@ angular.module('myApp.admin', ['ngRoute','myApp.service'])
   })
 }])
 
-.controller('indexCtrl', [function() {
-
+.controller('indexCtrl', ['$scope','ajax',function(_that,ajax) {
+    _that.list = null;
+    _that.page={
+        total:1,
+        index:1
+    }
+    function load() {
+        ajax({
+            url:"/customer/getlist",
+            params:{}
+        }).then(function (data) {
+          _that.page.total = data.data.count;
+          _that.list = data.data.list;
+        })
+    }
+    _that.topage = function(page){
+        _that.page.index = page;
+        load();
+    }
+    load();
 }])
 
 .controller('userListCtrl', ['$scope','ajax',function(_that,ajax) {
