@@ -8,7 +8,7 @@
 <comm-view ng-controller="addcustomer">
     <div class="panel">
         <div class="panel-heading">
-            其他公司信息
+            车辆信息
         </div>
         <div class="panel-body">
             <table class="table table-hover">
@@ -29,16 +29,15 @@
                 <tbody>
                 <tr ng-repeat="item in list">
                     <th scope="row">{{list.indexOf(item)+1}}</th>
-                    <td><input ng-model="model.carname[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carno[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.cartotal[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carbuytime[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carbuytype[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carloan[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carloanmonth[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carloanrmonth[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carloanmonthpirce[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.carloanbalance[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].name"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].no"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].total"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].buytime"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].buytype"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].loan"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].loanmonth"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].loanmonthpirce"></td>
+                    <td><input ng-model="model.car[list.indexOf(item)].loanbalance"></td>
                 </tr>
                 </tbody>
             </table>

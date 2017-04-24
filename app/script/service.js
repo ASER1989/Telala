@@ -38,6 +38,10 @@ ag.service("ajax",['$http','$location',function ($http,$location) {
     }
     return ajax;
 }]);
+
+ag.service("paramObj",function () {
+    this.data=null;
+})
 ag.service("path",function () {
     this.upPath =null;
 })

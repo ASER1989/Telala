@@ -6,8 +6,7 @@ angular.module('myApp.common', ['ngRoute'])
     path.upPath =$location.path();
     $scope.custPath = "#!"+ path.upPath;
     $scope.menu=[
-        {url:"#!/admin/index",txt:"首页"},
-        {url:"#!/user/list",txt:"用户管理"},
-        {url:"",txt:"客户管理"},
+        {url:"#!/admin/index",txt:"客户管理"},
+        {url:"#!/user/list",txt:"用户管理"}
     ]
 }]);

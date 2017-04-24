@@ -1,6 +1,6 @@
 <comm-view ng-controller="userListCtrl">
-    <div class="panel" >
-        <div class="panel-body">
+    <div class="panel " >
+        <div class="panel-body cust-list-panel">
             <table class="table table-hover">
                 <caption>
                 </caption>
@@ -17,7 +17,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="item in list">
+                <tr ng-repeat="item in list" ng-click="todetail(item)">
                     <th scope="row">{{$index+1}}</th>
                     <td>{{item.name}}</td>
                     <td>{{item.sex}}</td>
@@ -29,8 +29,9 @@
                 </tr>
                 </tbody>
             </table>
+            <div barclass="stage-pager-class pager-border mg-top-30 mg-reset" pager action="toPage(page)" id="pager"
+                 total="page.total"></div>
         </div>
     </div>
-    <div barclass="stage-pager-class pager-border mg-top-30 mg-reset" pager action="toPage(page)" id="pager"
-         total="page.total"></div>
+
 </comm-view>

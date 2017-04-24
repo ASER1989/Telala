@@ -28,14 +28,14 @@
                 <tbody>
                 <tr ng-repeat="item in list">
                     <th scope="row">{{list.indexOf(item)+1}}</th>
-                    <td><input ng-model="model.loanname[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loanway[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loantype[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loantotal[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loanterm[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loantime[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loanbalance[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.loanremark[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].name"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].way"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].type"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].total"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].term"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].time"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].balance"></td>
+                    <td><input ng-model="model.loan[list.indexOf(item)].remark"></td>
                 </tr>
                 </tbody>
             </table>

@@ -27,12 +27,12 @@
                 <tbody>
                 <tr ng-repeat="item in list">
                     <th scope="row">{{list.indexOf(item)+1}}</th>
-                    <td><input ng-model="model.othcpname[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.othcpaddr[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.othcpuser[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.othcpctime[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.othcppro[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.othcpcpyearamt[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.othcp[list.indexOf(item)].name"></td>
+                    <td><input ng-model="model.othcp[list.indexOf(item)].addr"></td>
+                    <td><input ng-model="model.othcp[list.indexOf(item)].user"></td>
+                    <td><input ng-model="model.othcp[list.indexOf(item)].ctime"></td>
+                    <td><input ng-model="model.othcp[list.indexOf(item)].pro"></td>
+                    <td><input ng-model="model.othcp[list.indexOf(item)].cpyearamt"></td>
                 </tr>
                 </tbody>
             </table>

@@ -29,15 +29,15 @@
                 <tbody>
                 <tr ng-repeat="item in list">
                     <th scope="row">{{list.indexOf(item)+1}}</th>
-                    <td><input ng-model="model.housename[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.houseaddr[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.housesize[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.housepirce[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.housepaytype[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.houseneedpay[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.housepay[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.housepaytime[list.indexOf(item)]"></td>
-                    <td><input ng-model="model.housepaylit[list.indexOf(item)]"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].name"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].addr"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].size"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].pirce"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].paytype"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].needpay"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].pay"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].paytime"></td>
+                    <td><input ng-model="model.house[list.indexOf(item)].paylit"></td>
                 </tr>
                 </tbody>
             </table>

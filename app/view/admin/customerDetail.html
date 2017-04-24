@@ -1,0 +1,226 @@
+<comm-view>
+    <div class="panel customer-detail">
+        <div class="panel-heading"><a href="#!/admin/index" class="btn btn-link"><img src="img/back.png" height="32" width="32"/></a></div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{item.user}}({{item.CreateTime | date: 'yyyy-MM-dd HH:mm:ss'}})</div>
+            <div class="panel-body ">
+                <div>
+                    <b>姓名：</b>
+                    <small>{{item.name || '无' }} </small>
+                    <b>性别：</b>
+                    <small>{{item.sex || '无' }} </small>
+                    <b>婚姻状况:</b>
+                    <small>{{item.ismarr ||  '无' }} </small>
+                    <b>电话:</b>
+                    <small>{{item.phone ||  '无' }} </small>
+                    <b>家庭地址：</b>
+                    <small>{{item.address ||'无' }} </small>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">资金需求情况</div>
+            <div class="panel-body ">
+                <div>
+                    <b>用途：</b>
+                    <small>{{item.hoploanway || '无' }} </small>
+                    <b>期望额度：</b>
+                    <small>{{item.hoploantotal || '无' }} </small>
+                    <b>期望还款方式:</b>
+                    <small>{{item.hoploanpaytype || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">配偶信息</div>
+            <div class="panel-body ">
+                <div>
+                    <b>姓名：</b>
+                    <small>{{item.name2 || '无' || '无' }} </small>
+                    <b>性别：</b>
+                    <small>{{item.sex2 || '无' || '无' }} </small>
+                    <b>婚姻状况:</b>
+                    <small>{{item.ismarr2 || '无' || '无' }} </small>
+                    <b>电话:</b>
+                    <small>{{item.phone2 || '无' || '无' }} </small>
+                    <b>家庭地址：</b>
+                    <small>{{item.address2 || '无' || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">公司信息</div>
+            <div class="panel-body ">
+                <div>
+                    <b>公司名称：</b>
+                    <small>{{item.cpname || '无' }} </small>
+                    <b>所属行业：</b>
+                    <small>{{item.cptype || '无' }} </small>
+                    <b>法人代表:</b>
+                    <small>{{item.cpuser || '无' }} </small>
+                    <b>主营产品:</b>
+                    <small>{{item.cppro || '无' }} </small>
+                    <b>成立日期：</b>
+                    <small>{{item.cpctime || '无' }} </small>
+                </div>
+                <div>
+                    <b>变更时间：</b>
+                    <small>{{item.cpuptime || '无' }} </small>
+                    <b>注册地址：</b>
+                    <small>{{item.cpresaddress || '无' }} </small>
+                    <b>年销售额:</b>
+                    <small>{{item.cpyearamt || '无' }} </small>
+                    <b>年纳税额:</b>
+                    <small>{{item.cppayamt || '无' }} </small>
+                    <b>对公账户半年流水：</b>
+                    <small>{{item.cphyearpubval || '无' }} </small>
+                </div>
+                <div>
+                    <b>对私账户半年流水：</b>
+                    <small>{{item.cphyearprival || '无' }} </small>
+                    <b>pos机半年账流水：</b>
+                    <small>{{item.cpposval || '无' }} </small>
+                    <b>配偶名下半年流水:</b>
+                    <small>{{item.cpotherval || '无' }} </small>
+                    <b>应收账款:</b>
+                    <small>{{item.cpnin || '无' }} </small>
+                    <b>应付账款：</b>
+                    <small>{{item.cpneedpay || '无' }} </small>
+                </div>
+                <div>
+                    <b>库存：</b>
+                    <small>{{item.cpstock || '无' }} </small>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">其他公司信息</div>
+            <div class="panel-body ">
+                <div ng-repeat="obj in item.othcp">
+                    <b>公司名称：</b>
+                    <small>{{obj.name || '无' }} </small>
+                    <b>所在地区：</b>
+                    <small>{{obj.addr || '无' }} </small>
+                    <b>法人代表:</b>
+                    <small>{{obj.user || '无' }} </small>
+                    <b>成立日期:</b>
+                    <small>{{obj.ctime || '无' }} </small>
+                    <b>主营产品：</b>
+                    <small>{{obj.pro || '无' }} </small>
+                    <b>年销售额：</b>
+                    <small>{{obj.cpyearamt || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">不动产信息</div>
+            <div class="panel-body ">
+                <div ng-repeat="obj in item.house">
+                    <b>名称：</b>
+                    <small>{{obj.name || '无' }} </small>
+                    <b>房屋所在区县：</b>
+                    <small>{{obj.addr || '无' }} </small>
+                    <b>建筑面积:</b>
+                    <small>{{obj.size || '无' }} </small>
+                    <b>市场价值:</b>
+                    <small>{{obj.pirce || '无' }} </small>
+                    <b>全款/按揭/抵押：</b>
+                    <small>{{obj.paytype || '无' }} </small>
+                    <b>贷款金额：</b>
+                    <small>{{obj.needpay || '无' }} </small>
+                    <b>月供金额：</b>
+                    <small>{{obj.pay || '无' }} </small>
+                    <b>已贷时长：</b>
+                    <small>{{obj.paytime || '无' }} </small>
+                    <b>贷款余额：</b>
+                    <small>{{obj.paylit || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">其他贷款信息</div>
+            <div class="panel-body ">
+                <div ng-repeat="obj in loan">
+                    <b>贷款主体：</b>
+                    <small>{{obj.name || '无' }} </small>
+                    <b>贷款机构：</b>
+                    <small>{{obj.way || '无' }} </small>
+                    <b>贷款种类:</b>
+                    <small>{{obj.type || '无' }} </small>
+                    <b>贷款金额:</b>
+                    <small>{{obj.total || '无' }} </small>
+                    <b>贷款期限：</b>
+                    <small>{{obj.term || '无' }} </small>
+                    <b>已贷时间：</b>
+                    <small>{{obj.time || '无' }} </small>
+                    <b>贷款余额：</b>
+                    <small>{{obj.balance || '无' }} </small>
+                    <b>备注：</b>
+                    <small>{{obj.remark || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">车辆信息</div>
+            <div class="panel-body ">
+                <div ng-repeat="obj in car">
+                    <b>权属人：</b>
+                    <small>{{obj.name || '无' }} </small>
+                    <b>牌照：</b>
+                    <small>{{obj.no || '无' }} </small>
+                    <b>裸车价:</b>
+                    <small>{{obj.total || '无' }} </small>
+                    <b>购车日期:</b>
+                    <small>{{obj.buytime || '无' }} </small>
+                    <b>按揭/全款：</b>
+                    <small>{{obj.buytype || '无' }} </small>
+                    <b>贷款金额：</b>
+                    <small>{{obj.loan || '无' }} </small>
+                    <b>已供月数：</b>
+                    <small>{{obj.loanmonth || '无' }} </small>
+                    <b>月供金额：</b>
+                    <small>{{obj.loanmonthpirce || '无' }} </small>
+                    <b>贷款余额：</b>
+                    <small>{{obj.loanbalance || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">信用卡使用情况</div>
+            <div class="panel-body ">
+                <div>
+                    <b>本人信用卡总数：</b>
+                    <small>{{item.myblcardCnt || '无' }} </small>
+                    <b>信用卡总额度(本人)：</b>
+                    <small>{{item.myblcardTotal || '无' }} </small>
+                    <b>已使用额度(本人):</b>
+                    <small>{{item.myblcardRtl || '无' }} </small>
+                </div>
+                <div>
+                    <b>配偶信用卡总数：</b>
+                    <small>{{item.blcardCnt || '无' }} </small>
+                    <b>信用卡总额度(配偶)：</b>
+                    <small>{{item.blcardTotal || '无' }} </small>
+                    <b>已使用额度(配偶):</b>
+                    <small>{{item.blcardRtl || '无' }} </small>
+                </div>
+                <div>
+                    <b>其他情况（如：保单、公积金、打卡工资等）：</b>
+                    <small>{{item.lastremark || '无' }} </small>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel-heading"><a href="#!/admin/index" class="btn btn-link"><img src="img/back.png" height="32" width="32"/></a></div>
+    </div>
+
+</comm-view>

@@ -14,13 +14,17 @@ angular.module('myApp.admin', ['ngRoute','myApp.service','app.pager'])
     templateUrl: 'view/admin/customerList.html',
     controller: 'indexCtrl'
   })
+  .when('/admin/cus-detail', {
+      templateUrl: 'view/admin/customerDetail.html',
+      controller: 'customerDetail'
+  })
   .when('/user/list', {
       templateUrl: 'view/admin/userList.html',
       controller: 'userListCtrl'
   })
 }])
 
-.controller('indexCtrl', ['$scope','ajax',function(_that,ajax) {
+.controller('indexCtrl', ['$scope','ajax','paramObj','$location',function(_that,ajax,param,$loc) {
     _that.list = null;
     _that.page={
         total:1,
@@ -40,8 +44,16 @@ angular.module('myApp.admin', ['ngRoute','myApp.service','app.pager'])
         load();
     }
     load();
+    
+    _that.todetail=function (item) {
+        param.data =JSON.parse(item.detail);
+        $loc.path("/admin/cus-detail");
+    }
 }])
-
+.controller("customerDetail",['$scope','ajax','paramObj','$location',function (_that,ajax,param,$loc) {
+    param.data==null && $loc.path("/admin/index");
+    _that.item = param.data;
+}])
 .controller('userListCtrl', ['$scope','ajax',function(_that,ajax) {
     _that.loginHide=true;
     _that.form={};
