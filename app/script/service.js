@@ -42,6 +42,10 @@ ag.service("ajax",['$http','$location',function ($http,$location) {
 ag.service("paramObj",function () {
     this.data=null;
 })
+ag.service("user",function () {
+    this.type=null;
+    this.nickname=null;
+})
 ag.service("path",function () {
     this.upPath =null;
 })

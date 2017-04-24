@@ -24,11 +24,13 @@ angular.module('myApp.login', ['ngRoute'])
                 method:"post",
                 data:{name:this.uname,pwd:this.pwd}
             }).then(function(res) {
+
                 if(res.code<0){
                     $scope.msgHide = false;
                     return;
                 }
-                $scope.path.upPath=$scope.path.upPath || "/admin/index";
+
+                $scope.path.upPath=$scope.path.upPath || (res.data.Type==0?"/admin/index":"/stage/add") ;
                 this.path($scope.path.upPath);
 
             })

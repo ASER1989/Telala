@@ -3,10 +3,10 @@
 angular.module('myApp.stage', ['ngRoute', 'myApp.service'])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-    .when('/stage/index', {
-        templateUrl: 'view/stage/index.html',
-        controller: 'indexCtrl'
-    })
+    // .when('/stage/index', {
+    //     templateUrl: 'view/stage/index.html',
+    //     controller: 'indexCtrl'
+    // })
     .when('/stage/add', {
         templateUrl: 'view/stage/addCustomer.html',
         controller: 'addcustomer'

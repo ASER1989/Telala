@@ -24,7 +24,12 @@ angular.module('myApp.admin', ['ngRoute','myApp.service','app.pager'])
   })
 }])
 
-.controller('indexCtrl', ['$scope','ajax','paramObj','$location',function(_that,ajax,param,$loc) {
+.controller('indexCtrl', ['$scope','ajax','paramObj','$location','user',function(_that,ajax,param,$loc,user) {
+
+    if(user.type!=0){
+        $loc.path("/stage/add");
+        return;
+    }
     _that.list = null;
     _that.page={
         total:1,
@@ -78,7 +83,7 @@ angular.module('myApp.admin', ['ngRoute','myApp.service','app.pager'])
                 url:"/index/AddUser",
                 params:_that.form
             }).then(function (data) {
-                if(data.code>0){
+                if(data.code>=0){
                     init();
                     _that.loginHide=true;
                 }
