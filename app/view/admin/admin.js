@@ -76,6 +76,9 @@ angular.module('myApp.admin', ['ngRoute','myApp.service','app.pager'])
     }
     init();
 
+    _that.showBox=function () {
+        _that.loginHide=false;
+    }
 
     _that.save=function (valid) {
         if(valid){

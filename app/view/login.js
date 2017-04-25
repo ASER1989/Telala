@@ -13,7 +13,7 @@ angular.module('myApp.login', ['ngRoute'])
   });
 }])
 
-.controller('loginCtrl', ['$scope','ajax','path',function($scope,ajax,path) {
+.controller('loginCtrl', ['$scope','ajax','path','user',function($scope,ajax,path,user) {
     $scope.path = path;
     $scope.msgHide = true;
     $scope.sign=function (valid) {
@@ -29,6 +29,8 @@ angular.module('myApp.login', ['ngRoute'])
                     $scope.msgHide = false;
                     return;
                 }
+                user.type = res.data.Type;
+                user.nickname=  res.data.NickName;
 
                 $scope.path.upPath=$scope.path.upPath || (res.data.Type==0?"/admin/index":"/stage/add") ;
                 this.path($scope.path.upPath);
