@@ -27,6 +27,7 @@ ag.service("ajax",['$http','$location',function ($http,$location) {
                     return;
                 }
                if(res.code==-100){
+                    console.log(v);
                     alert("您无权访问当前页面！")
                    return;
                }

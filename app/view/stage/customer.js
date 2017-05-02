@@ -210,8 +210,9 @@ angular.module('myApp.stage', ['ngRoute', 'myApp.service'])
             method: "post"
 
         }).then(function (data) {
-            if (data.code > 0) {
+            if (data.code >= 0) {
                 alert("保存成功！");
+                $location.path("/admin/index");
             }
         })
     }
